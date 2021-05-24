@@ -1,7 +1,7 @@
 {
-  "name": "foundry-typescript-template",
+  "name": "global-inventory",
   "version": "1.0.0",
-  "description": "Foundry VTT Typescript Template",
+  "description": "A module to add a global inventory for players with permission to access",
   "main": "index.js",
   "scripts": {
     "build": "gulp build"
@@ -9,7 +9,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@league-of-foundry-developers/foundry-vtt-types": "^0.7.9-6",
     "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
     "gulp-typescript": "^6.0.0-alpha.1"
   },
   "dependencies": {

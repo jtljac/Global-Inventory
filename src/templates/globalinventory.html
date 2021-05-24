@@ -1,0 +1,35 @@
+<form class="{{cssClass}} swalt-sheet" autocomplete="off">
+
+    {{!-- NPC Sheet Header --}}
+    <header class="panel">
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" />
+        <h1 class="character-name">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'SW5E.Name' }}" />
+        </h1>
+    </header>
+
+    {{!-- NPC Sheet Navigation --}}
+    <nav class="sheet-navigation root-tabs" data-group="primary">
+        <button class="item active" data-tab="inventory">{{ localize "SW5E.Inventory" }}</button>
+        <button class="item" data-tab="biography">{{ localize "SW5E.Biography" }}</button>
+    </nav>
+
+    {{!-- NPC Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Inventory Tab --}}
+        <div class="tab inventory" data-group="primary" data-tab="inventory">
+            {{> "systems/sw5e/templates/actors/newActor/parts/swalt-inventory.html" sections=inventory}}
+        </div>
+
+        {{!-- Biography Tab --}}
+        <div class="tab biography flexcol" data-group="primary" data-tab="biography">
+            <div class="panel">
+                <section>
+                    <h1>{{localize "SW5E.Biography"}}</h1>
+                    {{editor content=data.details.biography.value target="data.details.biography.value" button=true owner=owner editable=editable}}
+
+                </section>
+            </div>
+        </div>
+    </section>
+</form>

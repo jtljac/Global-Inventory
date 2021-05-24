@@ -1,11 +1,11 @@
 {
-  "name": "foundry-typescript-template",
-  "title": "Typescript Template",
+  "name": "global-inventory",
+  "title": "Global Inventory",
   "description": "", 
   "authors": [
     {
-      "name": "spacemandev",
-      "discord": "spacemandev#6256"
+      "name": "jtljac",
+      "discord": "Jtljac#4609"
     }
   ],
   "version": "0.0.1",
@@ -16,11 +16,14 @@
   "manifest": "",
   "download": "",
   "type": "module",
+  "systems": [
+    "sw5e"
+  ],
   "includes": [
     "./assets/**",
     "./lang/**",
     "./scripts/**",
-    "./styles/**",
+    "./css/**",
     "./templates/**",
     "./module.json",
     "./README.md"
@@ -40,16 +43,22 @@
     }
   ],
   "esmodules": [
-    "scripts/module.js"
+    "scripts/globalinv.js"
   ],
   "styles": [
-    "styles/module.css"
+    "css/globalinv.css"
   ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "sw5e",
+      "type": "system"
     }
   ]
 }
